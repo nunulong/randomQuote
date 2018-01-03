@@ -21,7 +21,7 @@ class Quotes extends Component {
 
   fetchColor = () => {
     $.ajax({
-      url: "//www.colr.org/json/color/random",
+      url: "http://www.colr.org/json/color/random",
       dataType: "json"
     })
       .done(response => {
