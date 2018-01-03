@@ -2,7 +2,7 @@
   "name": "random_quote",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://nunulong.github.io/randomQuote",
+  "homepage": "https://nunulong.github.io/randomQuote",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.0",
     "@fortawesome/fontawesome-free-brands": "^5.0.2",
