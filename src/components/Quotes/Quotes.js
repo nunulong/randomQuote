@@ -89,7 +89,7 @@ class Quotes extends Component {
             <Button color={!this.state.color ? '000' : this.state.color} onClick={this.handleTweet}>Tweet Me</Button>
           </FlexWrapper>
         </Div>
-        <FontAwesomeIcon icon={faGithub} size="3x" style={Object.assign({}, style1, style2)} />
+        <a href="https://github.com/nunulong/randomQuote"><FontAwesomeIcon icon={faGithub} size="3x" style={Object.assign({}, style1, style2)} /></a>
       </Wrapper>
     );
   }
