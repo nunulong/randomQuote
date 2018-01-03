@@ -3,6 +3,7 @@ import $ from "jquery";
 import { Div, H1, Button, FlexWrapper, Wrapper } from "./Quote.style";
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/fontawesome-free-solid';
+import { faGithub } from '@fortawesome/fontawesome-free-brands';
 
 class Quotes extends Component {
   constructor() {
@@ -72,6 +73,9 @@ class Quotes extends Component {
       'style', `background: #${this.state.color}; transition: background 2s ease;`
     );
 
+    const style1 = !this.state.color ? { color: "black" } : { color: "white" };
+    const style2 = { margin: "2rem" };
+
     return (
       <Wrapper color={this.state.color}>
         <H1 color={!this.state.color ? '000' : 'fff'}>Random Quote</H1>
@@ -82,9 +86,10 @@ class Quotes extends Component {
           </div>
           <FlexWrapper>
             <Button color={!this.state.color ? '000' : this.state.color} onClick={this.handleClick}>Quote Me</Button>
-            <Button color={!this.state.color ? '000' : this.state.color} onClick={this.handleTweet}>Twitter</Button>
+            <Button color={!this.state.color ? '000' : this.state.color} onClick={this.handleTweet}>Tweet Me</Button>
           </FlexWrapper>
         </Div>
+        <FontAwesomeIcon icon={faGithub} size="3x" style={Object.assign({}, style1, style2)} />
       </Wrapper>
     );
   }

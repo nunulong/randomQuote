@@ -1,14 +1,4 @@
-import styled, { injectGlobal, css } from 'styled-components';
-
-injectGlobal`
-  @import url('https://fonts.googleapis.com/css?family=Raleway');
-
-  body {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
-  }
-`;
+import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
   transition: all 2s ease;
@@ -20,7 +10,6 @@ export const Wrapper = styled.div`
 export const H1 = styled.h1`
   margin-top: 5vw;
   font-size: 7vw;
-  font-style: extra-bold;
   ${({ color }) => color && css`
     color: #${color};
   `};
@@ -46,6 +35,7 @@ export const Div = styled.div`
     padding-right: 3vw;
     font-weight: bolder;
   }
+
   h3 {
     text-align: right;
     padding-right: 5vw;
@@ -60,7 +50,7 @@ export const Button = styled.button`
   color: white;
   font-size: 1.25vw;
   display: inlin-block;
-  border-radius: 3px;
+  border-radius: 5px;
   padding: 0.75vh 0;
   margin: 0.75vh 0;
   width: 10vw;
@@ -72,5 +62,5 @@ export const Button = styled.button`
 export const FlexWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 `
