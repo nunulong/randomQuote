@@ -3,16 +3,14 @@ import styled, { css } from 'styled-components';
 export const Wrapper = styled.div`
   transition: all 2s ease;
   ${({ color }) => color && css`
-    color: #${color}
+    color: ${color}
   `};
 `
 
 export const H1 = styled.h1`
   margin-top: 5vw;
   font-size: 7vw;
-  ${({ color }) => color && css`
-    color: #${color};
-  `};
+  color: white;
 `
 
 export const Div = styled.div`
@@ -45,9 +43,9 @@ export const Div = styled.div`
 
 export const Button = styled.button`
   ${({ color }) => color && css`
-    background: #${color};
+    background: ${color};
   `}; 
-  color: white;
+  color: black;
   font-size: 1.25vw;
   display: inlin-block;
   border-radius: 5px;
