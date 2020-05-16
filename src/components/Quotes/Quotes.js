@@ -94,7 +94,7 @@ class Quotes extends Component {
           <FontAwesomeIcon
             icon={faGithub}
             size="3x"
-            style={Object.assign({}, style1, style2)}
+            style={Object.assign({}, {color: style1}, style2)}
           />
         </a>
       </Wrapper>
