@@ -26,25 +26,18 @@ class Quotes extends Component {
     this.setState({ color: randomColor });
   };
 
-  fetchQuote = () => {
-    $.ajax({
-      url: 'https://api.forismatic.com/api/1.0/',
-      jsonp: 'jsonp',
-      dataType: 'jsonp',
-      data: {
-        method: 'getQuote',
-        lang: 'en',
-        format: 'jsonp'
-      }
-    })
-      .done(response => {
-        this.setState({
-          quote: response
-        });
-      })
-      .fail((jqxhr, textStatus, err) => {
-        console.log(`Request Failed: ${textStatus}, ${err}`);
-      });
+  fetchQuote = async () => {
+
+    const url = 'https://thesimpsonsquoteapi.glitch.me/quotes';
+    const response = await fetch(url);
+
+    if (response.status == 200) {
+      const quote = await response.json();
+      this.setState({ quote: quote[0] });
+    } else {
+      console.log('Error fetching quote');
+    }
+
   };
 
   handleClick = () => {
@@ -54,8 +47,7 @@ class Quotes extends Component {
 
   handleTweet = () => {
     window.open(
-      `https://twitter.com/intent/tweet?hashtags=Quote&text="${
-        this.state.quote.quoteText
+      `https://twitter.com/intent/tweet?hashtags=Quote&text="${this.state.quote.quoteText
       }" ${this.state.quote.quoteAuthor}`
     );
   };
@@ -76,10 +68,10 @@ class Quotes extends Component {
           <div>
             <p>
               <FontAwesomeIcon icon={faQuoteLeft} />{' '}
-              {this.state.quote.quoteText}{' '}
+              {this.state.quote.quote}{' '}
               <FontAwesomeIcon icon={faQuoteRight} />
             </p>
-            <h3>{this.state.quote.quoteAuthor}</h3>
+            <h3>{this.state.quote.character}</h3>
           </div>
           <FlexWrapper>
             <Button color={this.state.color} onClick={this.handleClick}>
@@ -94,7 +86,7 @@ class Quotes extends Component {
           <FontAwesomeIcon
             icon={faGithub}
             size="3x"
-            style={Object.assign({}, {color: style1}, style2)}
+            style={Object.assign({}, { color: style1 }, style2)}
           />
         </a>
       </Wrapper>
