@@ -47,8 +47,7 @@ class Quotes extends Component {
 
   handleTweet = () => {
     window.open(
-      `https://twitter.com/intent/tweet?hashtags=Quote&text="${this.state.quote.quoteText
-      }" ${this.state.quote.quoteAuthor}`
+      `https://x.com/intent/post?hashtags=Quote&text="${this.state.quote.quote}" ${this.state.quote.character}`
     );
   };
 
