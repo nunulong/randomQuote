@@ -11,8 +11,8 @@
     "jquery": "^3.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.2.0",
-    "react-scripts": "^3.4.1",
-    "styled-components": "^2.4.0"
+    "react-scripts": "^5.0.1",
+    "styled-components": "^6.1.17"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,7 +23,7 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0"
+    "gh-pages": "^6.3.0"
   },
   "browserslist": {
     "production": [
