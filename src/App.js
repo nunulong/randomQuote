@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
+import { GlobalStyle } from './global.style';
 import Quotes from './components/Quotes/Quotes';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Quotes />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <>
+      <GlobalStyle />
+      <Quotes />
+    </>
+  );
 }
 
 export default App;
